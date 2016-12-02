@@ -28,4 +28,14 @@
  2、移除  
  
 
- popMenu.dismiss()
+ popMenu.dismiss()  
+   
+ 3、代理    
+ 
+ extension ViewController:SwiftPopMenuDelegate{
+    func swiftPopMenuDidSelectIndex(index: Int) {
+        popMenu.dismiss()
+        print("click \(index)")
+    
+    }
+}
