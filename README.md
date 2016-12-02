@@ -1,18 +1,22 @@
 # SwiftPopMenu
-效果图：
+效果图：＜/br＞
  ![image](https://github.com/TangledHusky/SwiftPopMenu/blob/master/img2.png)
  ![image](https://github.com/TangledHusky/SwiftPopMenu/blob/master/img1.png)
  
- 
+ ＜/br＞＜/br＞
  已支持 Swift3 语法
- 
+ ＜/br＞＜/br＞
  使用介绍：
+ ＜/br＞
  1、添加
+ ＜/br＞
 //frame 为整个popview相对整个屏幕的位置
         popMenu =  SwiftPopMenu(frame: CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112))
         popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),(icon:"SignRule",title:"签到规则")]
         popMenu.delegate = self
         UIApplication.shared.keyWindow?.addSubview(popMenu)
-				
+	
+＜/br＞	
  2、移除
+ ＜/br＞
  popMenu.dismiss()
