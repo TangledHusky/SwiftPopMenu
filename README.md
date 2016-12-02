@@ -7,9 +7,11 @@
   
   
  已支持 Swift3 语法
- ＜/br＞＜/br＞
+  
+  
  使用介绍：
- ＜/br＞
+  
+  
  1、添加
   
   
@@ -19,7 +21,9 @@
         popMenu.delegate = self
         UIApplication.shared.keyWindow?.addSubview(popMenu)
 	
-＜/br＞	
- 2、移除
- ＜/br＞
+  
+  
+ 2、移除  
+ 
+
  popMenu.dismiss()
