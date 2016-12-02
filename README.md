@@ -32,10 +32,11 @@
    
  3、代理    
  
- extension ViewController:SwiftPopMenuDelegate{
+<pre name="code" class="html"> extension ViewController:SwiftPopMenuDelegate{
     func swiftPopMenuDidSelectIndex(index: Int) {
         popMenu.dismiss()
-        print("click \(index)")
+        print(&quot;click \(index)&quot;)
     
     }
-}
+}</pre>
+<br />
