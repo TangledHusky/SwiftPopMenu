@@ -11,7 +11,8 @@
   
  使用介绍：
   
-  
+ 暂不支持pods导入，请下载文件，导入SwiftPopMenu.swift文件即可。  
+ 
  1、添加
   
   
