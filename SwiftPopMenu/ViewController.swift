@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     let KSCREEN_WIDTH:CGFloat = UIScreen.main.bounds.size.width
     
+    var tag:Int = 0
     
 
     override func viewDidLoad() {
@@ -31,9 +32,17 @@ class ViewController: UIViewController {
         //frame 为整个popview相对整个屏幕的位置  箭头距离右边位置，默认15
         //popMenu =  SwiftPopMenu(frame: CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112))
 
-        //frame 为整个popview相对整个屏幕的位置 arrowMargin ：指定箭头距离右边距离
-        popMenu = SwiftPopMenu(frame:  CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112), arrowMargin: 12)
+        if tag == 0 {
+            //frame 为整个popview相对整个屏幕的位置 arrowMargin ：指定箭头距离右边距离
+            popMenu = SwiftPopMenu(frame:  CGRect(x: KSCREEN_WIDTH - 222, y: 111, width: 130, height: 100), arrowMargin: 12)
+            
 
+        }else{
+            //frame 为整个popview相对整个屏幕的位置 arrowMargin ：指定箭头距离右边距离
+            popMenu = SwiftPopMenu(frame:  CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112), arrowMargin: 12)
+            
+
+        }
         
         popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),
                            (icon:"SignRule",title:"签到规则")]
@@ -44,6 +53,7 @@ class ViewController: UIViewController {
             
         }
         popMenu.show()
+        tag += 1
     }
 
     override func didReceiveMemoryWarning() {

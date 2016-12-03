@@ -13,7 +13,7 @@
 		FA12F78E1DF18166002F5FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA12F78D1DF18166002F5FE1 /* Assets.xcassets */; };
 		FA12F7911DF18166002F5FE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA12F78F1DF18166002F5FE1 /* LaunchScreen.storyboard */; };
 		FA12F79C1DF18166002F5FE1 /* SwiftPopMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12F79B1DF18166002F5FE1 /* SwiftPopMenuUITests.swift */; };
-		FA12F7A71DF18206002F5FE1 /* SwiftPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12F7A61DF18206002F5FE1 /* SwiftPopMenu.swift */; };
+		FA12F7AA1DF27AC3002F5FE1 /* SwiftPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12F7A91DF27AC3002F5FE1 /* SwiftPopMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		FA12F7971DF18166002F5FE1 /* SwiftPopMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPopMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA12F79B1DF18166002F5FE1 /* SwiftPopMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPopMenuUITests.swift; sourceTree = "<group>"; };
 		FA12F79D1DF18166002F5FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA12F7A61DF18206002F5FE1 /* SwiftPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPopMenu.swift; sourceTree = "<group>"; };
+		FA12F7A91DF27AC3002F5FE1 /* SwiftPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPopMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		FA12F7851DF18166002F5FE1 /* SwiftPopMenu */ = {
 			isa = PBXGroup;
 			children = (
-				FA12F7A61DF18206002F5FE1 /* SwiftPopMenu.swift */,
+				FA12F7A81DF27AC3002F5FE1 /* SwiftPopMenuSrc */,
 				FA12F7861DF18166002F5FE1 /* AppDelegate.swift */,
 				FA12F7881DF18166002F5FE1 /* ViewController.swift */,
 				FA12F78A1DF18166002F5FE1 /* Main.storyboard */,
@@ -97,6 +97,14 @@
 				FA12F79D1DF18166002F5FE1 /* Info.plist */,
 			);
 			path = SwiftPopMenuUITests;
+			sourceTree = "<group>";
+		};
+		FA12F7A81DF27AC3002F5FE1 /* SwiftPopMenuSrc */ = {
+			isa = PBXGroup;
+			children = (
+				FA12F7A91DF27AC3002F5FE1 /* SwiftPopMenu.swift */,
+			);
+			path = SwiftPopMenuSrc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA12F7891DF18166002F5FE1 /* ViewController.swift in Sources */,
-				FA12F7A71DF18206002F5FE1 /* SwiftPopMenu.swift in Sources */,
+				FA12F7AA1DF27AC3002F5FE1 /* SwiftPopMenu.swift in Sources */,
 				FA12F7871DF18166002F5FE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +414,7 @@
 				FA12F7A21DF18166002F5FE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA12F7A31DF18166002F5FE1 /* Build configuration list for PBXNativeTarget "SwiftPopMenuUITests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +423,7 @@
 				FA12F7A51DF18166002F5FE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
