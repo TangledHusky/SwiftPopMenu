@@ -29,6 +29,22 @@
 <br />
 &nbsp;&nbsp;<br />
 
+<pre name="code" class="html"></pre>
+<p>
+	<pre name="code" class="html">   //／*  ----------  可变参数 - 注意：设置属性要写在设置 popData数据源 前面！！------------- *／
+    
+    //小箭头距离右边距离
+    var arrowViewMargin : CGFloat = 15
+    //圆角弧度
+    var cornorRadius:CGFloat = 5
+    
+    //pop文字颜色
+    var popTextColor:UIColor = UIColor(red: 107 / 255.0, green: 107 / 255.0, blue: 107 / 255.0, alpha: 1.0)
+    //pop背景色
+    var popMenuBgColor:UIColor = UIColor.white</pre>
+	<br />
+</p>
+
 <p>
 	&nbsp;2、显示与移除
 </p>
