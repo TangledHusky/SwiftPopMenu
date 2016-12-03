@@ -17,7 +17,7 @@
 	&nbsp;使用介绍：
 </p>
 <p>
-	&nbsp;1、添加
+	&nbsp;1、初始化位置
 </p>
 <pre name="code" class="objc">        //frame 为整个popview相对整个屏幕的位置  箭头距离右边位置，默认15
         //popMenu =  SwiftPopMenu(frame: CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112))
