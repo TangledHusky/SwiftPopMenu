@@ -42,7 +42,14 @@
     var popTextColor:UIColor = UIColor(red: 107 / 255.0, green: 107 / 255.0, blue: 107 / 255.0, alpha: 1.0)
     //pop背景色
     var popMenuBgColor:UIColor = UIColor.white</pre>
+    
+    <pre name="code" class="objc">         
+    popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),
+                           (icon:"SignRule",title:"签到规则")]      
+
+</pre>
 	<br />
+
 </p>
 
 <p>
@@ -84,7 +91,7 @@
 <p>
 	<pre name="code" class="html"> var popMenu:SwiftPopMenu!
 
- popMenu = SwiftPopMenu(frame:  CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112), arrowMargin: 12)
+ 	popMenu = SwiftPopMenu(frame:  CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112), arrowMargin: 12)
         popMenu.popData = [(icon:&quot;saoyisao&quot;,title:&quot;扫一扫&quot;),
                            (icon:&quot;SignRule&quot;,title:&quot;签到规则&quot;)]
         //点击菜单
@@ -98,4 +105,4 @@
 	<br />
 	
 </p>
-<br />/>
+<br />
