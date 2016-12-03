@@ -2,7 +2,7 @@
 效果图：  
 
  ![image](https://github.com/TangledHusky/SwiftPopMenu/blob/master/img2.png)
- ![image](https://github.com/TangledHusky/SwiftPopMenu/blob/master/img1.png)
+ ![image](https://github.com/TangledHusky/SwiftPopMenu/blob/master/swiftPopMenu.gif)
  
   
   <pre name="code" class="html"></pre>
