@@ -123,7 +123,7 @@ class SwiftPopMenu: UIView {
         
         tableView=UITableView(frame: CGRect(x: myFrame.origin.x,y: myFrame.origin.y + arrowViewHeight,width: myFrame.width,height: myFrame.height - arrowViewHeight), style: .plain)
         tableView.register(SwiftPopMenuCell.classForCoder(), forCellReuseIdentifier: SwiftPopMenu.cellID)
-        tableView.backgroundColor = UIColor.clear
+        tableView.backgroundColor = popMenuBgColor
         tableView.layer.cornerRadius = cornorRadius
         tableView.layer.masksToBounds = true
         tableView.delegate = self
