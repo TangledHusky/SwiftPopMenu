@@ -20,16 +20,25 @@ class SwiftPopMenu: UIView {
     let KScrW:CGFloat = UIScreen.main.bounds.size.width
     let KScrH:CGFloat = UIScreen.main.bounds.size.height
     
-    var myFrame:CGRect!
+    private var myFrame:CGRect!
 
-    var arrowView : UIView! = nil
+    private var arrowView : UIView! = nil
     private var arrowViewWidth : CGFloat = 15
     private var arrowViewHeight : CGFloat = 8
     
+    
+    //／*  -----------------------  可变参数 ------------------------------------------ *／
+    
     //小箭头距离右边距离
     var arrowViewMargin : CGFloat = 15
+    //圆角弧度
+    var cornorRadius:CGFloat = 5
     
-    private var cornorRadius:CGFloat = 5
+    //pop文字颜色
+    var popTextColor:UIColor = UIColor(red: 107 / 255.0, green: 107 / 255.0, blue: 107 / 255.0, alpha: 1.0)
+    //pop背景色
+    var popMenuBgColor:UIColor = UIColor.white
+    
     
     
     var tableView:UITableView! = nil
@@ -37,6 +46,7 @@ class SwiftPopMenu: UIView {
         didSet{
             //计算行高
             rowHeightValue = (self.myFrame.height - arrowViewHeight)/CGFloat(popData.count)
+            initViews()
         }
         
     }
@@ -49,10 +59,7 @@ class SwiftPopMenu: UIView {
     var rowHeightValue:CGFloat = 44
     
     
-    //pop文字颜色
-//    let popTextColor:UIColor = UIColor(red: 107 / 255.0, green: 107 / 255.0, blue: 107 / 255.0, alpha: 1.0)
-    //pop背景色
-    var popMenuBgColor:UIColor = UIColor.white
+   
     
     /**
      位置是popmenu相对整个屏幕的位置
@@ -66,7 +73,6 @@ class SwiftPopMenu: UIView {
         
         self.frame = CGRect(x: 0, y: 0, width: KScrW, height: KScrH)
         myFrame = frame
-        initViews()
     }
     
     
@@ -81,7 +87,6 @@ class SwiftPopMenu: UIView {
         arrowViewMargin = arrowMargin
         self.frame = CGRect(x: 0, y: 0, width: KScrW, height: KScrH)
         myFrame = frame
-        initViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -143,13 +148,13 @@ class SwiftPopMenuCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = UIColor.clear
         
         iconImage = UIImageView()
         self.contentView.addSubview(iconImage)
         self.selectionStyle = .none
         
         lblTitle = UILabel()
-        lblTitle.textColor = UIColor(red: 107 / 255.0, green: 107 / 255.0, blue: 107 / 255.0, alpha: 1.0)
         lblTitle.font = UIFont.systemFont(ofSize: 16)
         self.contentView.addSubview(lblTitle)
         
@@ -162,12 +167,14 @@ class SwiftPopMenuCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func fill(iconImage:String,title:String,islast:Bool = false) {
+    func fill(iconImage:String,title:String,textColor:UIColor,islast:Bool = false) {
         self.iconImage.image = UIImage(named: iconImage)
         self.lblTitle.text = title
         self.line.isHidden = islast
+        lblTitle.textColor = textColor
         
-           }
+    }
+
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -192,9 +199,9 @@ extension SwiftPopMenu : UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: SwiftPopMenu.cellID) as! SwiftPopMenuCell
             let model = popData[indexPath.row]
             if indexPath.row == popData.count - 1 {
-                cell.fill(iconImage: model.icon, title: model.title, islast: true)
+                cell.fill(iconImage: model.icon, title: model.title,textColor: popTextColor, islast: true)
             }else{
-                 cell.fill(iconImage: model.icon, title: model.title)
+                 cell.fill(iconImage: model.icon, title: model.title,textColor: popTextColor)
             }
             return cell
         }
