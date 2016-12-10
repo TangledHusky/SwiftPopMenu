@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
 
   s.author             = { "TangledHusky" => "994825763@qq.com" }
-  s.deployment_target = "7.0"
+  s.platform     = :ios, "7.0"
 
 
 
