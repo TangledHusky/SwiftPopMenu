@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.summary      = "easy use SwiftPopMenu on iOS"
 
  
-  s.description  = "easy use SwiftPopMenu on iOS"
+  s.description  = "easy use SwiftPopMenu on iOS，use by readme"
 
   s.homepage     = "https://github.com/TangledHusky/SwiftPopMenu"
   
