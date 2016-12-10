@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "SwiftPopMenu"
-  s.version      = "0.0.3"
+  s.version      = "1.0.0"
   s.summary      = "easy use SwiftPopMenu on iOS"
 
   s.homepage     = "https://github.com/TangledHusky/SwiftPopMenu"
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.author       = { "李亚军" => "994825763@qq.com" }
 
-  s.source       = { :git => "https://github.com/TangledHusky/SwiftPopMenu.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/TangledHusky/SwiftPopMenu.git", :tag => "1.0.0" }
 
   s.source_files  = "SwiftPopMenu/*.{swift}"
   
