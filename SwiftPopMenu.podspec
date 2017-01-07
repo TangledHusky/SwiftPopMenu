@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
  
 
   s.name         = "SwiftPopMenu"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "easy use SwiftPopMenu on iOS"
 
  
