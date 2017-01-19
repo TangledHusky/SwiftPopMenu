@@ -8,7 +8,7 @@
 <p>
 	&nbsp;导入项目：
 </p>
-<p> - pods导入：pod SwiftPopMenu</p>
+<p> - pods导入：<code>pod 'SwiftPopMenu'</code></p>
 <p> - 文件导入：下载Demo，导入SwiftPopMenu.swift文件即可</p>
 &nbsp;代码现已支持 Swift3 语法&nbsp;&nbsp;&nbsp;&nbsp;
 <p>
