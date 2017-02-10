@@ -8,13 +8,14 @@
 <p>
 	&nbsp;导入项目：
 </p>
-<p>
-	&nbsp;暂不支持pods导入，请下载文件，导入SwiftPopMenu.swift文件即可。 &nbsp;
-</p>
-&nbsp;代码现已支持 Swift3 语法&nbsp;&nbsp;&nbsp;&nbsp;
+<p> - pods导入：<code>pod 'SwiftPopMenu'</code></p>
+<p> - 文件导入：下载Demo，导入SwiftPopMenu.swift文件即可</p>
+<p> - 代码现已支持 Swift3 语法</p>
 <p>
 	&nbsp;使用介绍：
 </p>
+<pre>import SwiftPopMenu</pre>
+<br />
 <p>
 	&nbsp;1、初始化位置
 </p>
@@ -42,12 +43,12 @@
     //pop背景色
     var popMenuBgColor:UIColor = UIColor.white</pre>
     
-    <pre name="code" class="objc">         
-    popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),
-                           (icon:"SignRule",title:"签到规则")]      
+    <pre name="code" class="objc">
+    //设置数据源 icon：图片名称  title：内容
+    popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),
+                       (icon:"SignRule",title:"签到规则")]      
 
 </pre>
-	<br />
 
 </p>
 
