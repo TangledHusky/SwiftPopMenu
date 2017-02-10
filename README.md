@@ -10,10 +10,12 @@
 </p>
 <p> - pods导入：<code>pod 'SwiftPopMenu'</code></p>
 <p> - 文件导入：下载Demo，导入SwiftPopMenu.swift文件即可</p>
-&nbsp;代码现已支持 Swift3 语法&nbsp;&nbsp;&nbsp;&nbsp;
+<p> - 代码现已支持 Swift3 语法</p>
 <p>
 	&nbsp;使用介绍：
 </p>
+<pre>import SwiftPopMenu</pre>
+<br />
 <p>
 	&nbsp;1、初始化位置
 </p>
