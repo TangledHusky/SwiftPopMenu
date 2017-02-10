@@ -43,12 +43,12 @@
     //pop背景色
     var popMenuBgColor:UIColor = UIColor.white</pre>
     
-    <pre name="code" class="objc">         
-    popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),
-                           (icon:"SignRule",title:"签到规则")]      
+    <pre name="code" class="objc">
+    //设置数据源 icon：图片名称  title：内容
+    popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),
+                       (icon:"SignRule",title:"签到规则")]      
 
 </pre>
-	<br />
 
 </p>
 
