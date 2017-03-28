@@ -47,17 +47,11 @@ import SwiftPopMenu
  popMenu.dismiss()  
 
 
- 3、点击事件  ，block回调处理
+ 3、点击事件，提供两种方式
+ 
+ - block回调处理
+ - 代理处理
 
- //点击菜单
-<pre>
-popMenu.didSelectMenuBlock = { [weak self](index:Int)->Void in
-
-       self?.popMenu.dismiss()
-       print("block select \(index)")
-            
- }
-</pre>
 
  示例代码：
 <pre>
