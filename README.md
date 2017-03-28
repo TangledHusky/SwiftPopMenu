@@ -41,11 +41,11 @@ import SwiftPopMenu
 
 
  2、显示与移除
-
+<pre>
  popMenu.show()
 
  popMenu.dismiss()  
-
+</pre>
 
  3、点击事件，提供两种方式
  
