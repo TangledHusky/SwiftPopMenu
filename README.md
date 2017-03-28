@@ -33,6 +33,7 @@ import SwiftPopMenu
     var popTextColor:UIColor = UIColor(red: 107 / 255.0, green: 107 / 255.0, blue: 107 / 255.0, alpha: 1.0)
     //pop背景色
     var popMenuBgColor:UIColor = UIColor.white
+    
     //设置数据源 icon：图片名称  title：内容
     popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),
                        (icon:"SignRule",title:"签到规则")]   
