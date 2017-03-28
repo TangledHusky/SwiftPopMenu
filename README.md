@@ -49,18 +49,18 @@ import SwiftPopMenu
 
  3、点击事件  ，block回调处理
 
-  //点击菜单
-
+ //点击菜单
+<pre>
 popMenu.didSelectMenuBlock = { [weak self](index:Int)->Void in
 
        self?.popMenu.dismiss()
        print("block select \(index)")
             
  }
+</pre>
 
-
-示例代码：
-
+ 示例代码：
+<pre>
  var popMenu:SwiftPopMenu!
 
  popMenu = SwiftPopMenu(frame:  CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112), arrowMargin: 12)
@@ -73,6 +73,9 @@ popMenu.didSelectMenuBlock = { [weak self](index:Int)->Void in
             
  }
  popMenu.show()
+
+</pre>
+
 
 
 
