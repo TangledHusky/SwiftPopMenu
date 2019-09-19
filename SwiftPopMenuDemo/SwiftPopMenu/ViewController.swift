@@ -13,47 +13,53 @@ class ViewController: UIViewController {
     var popMenu:SwiftPopMenu!
     
     let KSCREEN_WIDTH:CGFloat = UIScreen.main.bounds.size.width
-    
-    var tag:Int = 0
-    
+    let KSCREEN_HEIGHT:CGFloat = UIScreen.main.bounds.size.height
+
+    lazy var btn:UIButton = {
+       let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
+        btn.center = self.view.center
+        btn.backgroundColor = UIColor.black
+        btn.setTitle("点击测试", for: .normal)
+        btn.addTarget(self, action: #selector(showMenu), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.addSubview(btn)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Shape"), style: .plain, target: self, action: #selector(self.showMenu))
         
    
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func showMenu() {
-        //frame 为整个popview相对整个屏幕的位置  箭头距离右边位置，默认15
-        //popMenu =  SwiftPopMenu(frame: CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112))
-
-        if tag == 0 {
-            //frame 为整个popview相对整个屏幕的位置 arrowMargin ：指定箭头距离右边距离
-            popMenu = SwiftPopMenu(frame:  CGRect(x: KSCREEN_WIDTH - 222, y: 111, width: 130, height: 100), arrowMargin: 12)
-            
-
-        }else{
-            //frame 为整个popview相对整个屏幕的位置 arrowMargin ：指定箭头距离右边距离
-            popMenu = SwiftPopMenu(frame:  CGRect(x: KSCREEN_WIDTH - 155, y: 51, width: 150, height: 112), arrowMargin: 12)
-            
-
-        }
+    @objc func showMenu() {
+        //数据源（icon可不填）
+        let popData = [(icon:"saoyisao",title:"扫一扫"),
+                       (icon:"SignRule",title:"签到规则"),
+                       (icon:"saoyisao",title:"扫一扫"),
+                       (icon:"SignRule",title:"签到规则"),
+                       (icon:"saoyisao",title:"扫一扫"),
+                       (icon:"SignRule",title:"签到规则")]
         
-        popMenu.popData = [(icon:"saoyisao",title:"扫一扫"),
-                           (icon:"SignRule",title:"签到规则")]
-        //点击菜单
-        popMenu.didSelectMenuBlock = { [weak self](index:Int)->Void in
-            self?.popMenu.dismiss()
+        //设置参数
+        let parameters:[SwiftPopMenuConfigure] = [
+            .PopMenuTextColor(UIColor.black),
+            .popMenuItemHeight(44),
+            .PopMenuTextFont(UIFont.systemFont(ofSize: 18))
+        ]
+        
+        //init  (随机生成点位置)
+        popMenu = SwiftPopMenu(menuWidth: 150, arrow: CGPoint(x: CGFloat(arc4random_uniform(UInt32(KSCREEN_WIDTH-100)) + 80), y: CGFloat(arc4random_uniform(UInt32(KSCREEN_HEIGHT-100)) + 80)), datas: popData,configures: parameters)
+
+        //click
+        popMenu.didSelectMenuBlock = { [weak self](index:Int)->Void in            
             print("block select \(index)")
-            
+            self?.popMenu = nil
         }
         popMenu.show()
-        tag += 1
+        
     }
 
     override func didReceiveMemoryWarning() {
