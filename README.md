@@ -1,7 +1,6 @@
 # SwiftPopMenu 效果图：
-
-![image](https://github.com/TangledHusky/SwiftPopMenu/blob/master/swiftPopMenu.gif)
 ![image](https://github.com/TangledHusky/SwiftPopMenu/blob/master/img1.png)
+![image](https://github.com/TangledHusky/SwiftPopMenu/blob/master/img2.png)
 
 
  功能：
