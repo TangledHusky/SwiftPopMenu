@@ -27,18 +27,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(btn)
-        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Shape"), style: .plain, target: self, action: #selector(self.showMenu))
-        
-   
-        
     }
     
     @objc func showMenu() {
         //数据源（icon可不填）
         let popData = [(icon:"saoyisao",title:"扫一扫"),
-                       (icon:"SignRule",title:"签到规则"),
-                       (icon:"saoyisao",title:"扫一扫"),
                        (icon:"SignRule",title:"签到规则"),
                        (icon:"saoyisao",title:"扫一扫"),
                        (icon:"SignRule",title:"签到规则")]
@@ -50,23 +44,18 @@ class ViewController: UIViewController {
             .PopMenuTextFont(UIFont.systemFont(ofSize: 18))
         ]
         
-        //init  (随机生成点位置)
-        popMenu = SwiftPopMenu(menuWidth: 150, arrow: CGPoint(x: CGFloat(arc4random_uniform(UInt32(KSCREEN_WIDTH-100)) + 80), y: CGFloat(arc4random_uniform(UInt32(KSCREEN_HEIGHT-100)) + 80)), datas: [],configures: parameters)
+        //init  (test随机生成点位置，注意：arrow点是基于屏幕的位置)
+        popMenu = SwiftPopMenu(menuWidth: 150, arrow: CGPoint(x: CGFloat(arc4random_uniform(UInt32(KSCREEN_WIDTH-100)) + 80), y: CGFloat(arc4random_uniform(UInt32(KSCREEN_HEIGHT-100)) + 80)), datas: popData,configures: parameters)
 
         //click
         popMenu.didSelectMenuBlock = { [weak self](index:Int)->Void in            
             print("block select \(index)")
             self?.popMenu = nil
         }
+        //show
         popMenu.show()
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-
+    
 }
