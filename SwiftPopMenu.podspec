@@ -5,10 +5,10 @@ Pod::Spec.new do |s|
 
   s.name         = "SwiftPopMenu"
   s.version      = "2.0.0"
-  s.summary      = "easy use SwiftPopMenu on iOS"
-
+  s.summary      = "support swift5 ,easy use SwiftPopMenu on iOS"
+  s.swift_version = '5.0'
  
-  s.description  = "support swift5    优化使用方式"
+  s.description  = "优化使用方式 support swift5 ,easy use SwiftPopMenu on iOS"
 
   s.homepage     = "https://github.com/TangledHusky/SwiftPopMenu"
   
