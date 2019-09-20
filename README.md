@@ -15,11 +15,11 @@
 
  导入项目：
 
-- pods导入：pod 'SwiftPopMenu' （2.x已支持swift5）
+- pods导入：pod 'SwiftPopMenu' 
 
 - 文件导入：下载Demo，导入SwiftPopMenu.swift文件即可
 
-- 代码现已支持 Swift5 语法
+- 代码现已支持 Swift5 （2.x已支持swift5，1.x支持swift3）
 
 
  使用介绍：
@@ -57,15 +57,15 @@ import SwiftPopMenu
  4、参数配置(使用时可不传)
  <pre>
 public enum SwiftPopMenuConfigure {
-    case PopMenuTextFont(UIFont)            //菜单文字字体
-    case PopMenuTextColor(UIColor)          //菜单文字颜色
-    case PopMenuBackgroudColor(UIColor)     //菜单背景色
-    case popMenuCornorRadius(CGFloat)       //菜单圆角
-    case popMenuItemHeight(CGFloat)         //菜单高度
-    case popMenuSplitLineColor(UIColor)     //菜单分割线颜色
-    case popMenuIconLeftMargin(CGFloat)     //icon左间距
-    case popMenuMargin(CGFloat)             //菜单与屏幕边距
-    case popMenuAlpha(CGFloat)              //菜单背景透明度
+    case PopMenuTextFont(UIFont)            //菜单文字字体，默认systemFont(ofSize: 17)
+    case PopMenuTextColor(UIColor)          //菜单文字颜色，默认black
+    case PopMenuBackgroudColor(UIColor)     //菜单背景色，默认white
+    case popMenuCornorRadius(CGFloat)       //菜单圆角，默认6
+    case popMenuItemHeight(CGFloat)         //菜单行高度（非整个高度），默认44
+    case popMenuSplitLineColor(UIColor)     //菜单分割线颜色，默认（222，222，222）
+    case popMenuIconLeftMargin(CGFloat)     //icon左间距，默认15
+    case popMenuMargin(CGFloat)             //菜单与屏幕边距，默认10
+    case popMenuAlpha(CGFloat)              //菜单背景透明度，默认0.3
 }
  </pre>
 
