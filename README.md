@@ -1,6 +1,5 @@
 # SwiftPopMenu 效果图：
 <img src="https://github.com/TangledHusky/SwiftPopMenu/blob/master/img1.png" width="180">
-<img src="https://github.com/TangledHusky/SwiftPopMenu/blob/master/img2.png" width="180">
 
  功能：
     只需要传入菜单箭头点位置、菜单宽度、数据源即可。
