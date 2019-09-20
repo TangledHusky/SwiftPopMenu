@@ -4,7 +4,17 @@
 //
 //  Created by lyj on 16/5/7.
 //  Copyright © 2016年 zyyj. All rights reserved.
-//
+/*
+    GitHub：https://github.com/TangledHusky/SwiftPopMenu
+ 
+    功能：
+    只需要传入菜单箭头点位置、菜单宽度、数据源即可。
+ 
+    1、支持任意点弹出（点是基于整个屏幕位置）
+    2、会根据点位置自动计算菜单位置
+    3、背景色、文字等支持自定义设置
+    4、菜单最大宽度=屏幕-边距    最大高度=屏幕高度一半
+ */
 
 import UIKit
 
@@ -77,7 +87,7 @@ public class SwiftPopMenu: UIView {
  /// - Parameters:
  ///   - menuWidth: 菜单宽度
  ///   - arrow: 箭头位置是popmenu相对整个屏幕的位置
- ///   - datas: 数据源，icon没有就传空
+ ///   - datas: 数据源，icon允许传空，数据源没数据，不会显示菜单
  ///   - configure: 配置信息，可不传
     init(menuWidth:CGFloat,arrow:CGPoint,datas:[(icon:String,title:String)],configures:[SwiftPopMenuConfigure] = []) {
         super.init(frame: UIScreen.main.bounds)
@@ -221,6 +231,9 @@ extension SwiftPopMenu{
     }
     
     public func show() {
+        if popData.isEmpty{
+            return
+        }
         initViews()
         UIApplication.shared.keyWindow?.addSubview(self)
     }
