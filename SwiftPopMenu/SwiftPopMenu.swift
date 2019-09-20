@@ -18,7 +18,7 @@
 
 import UIKit
 
-public protocol SwiftPopMenuDelegate {
+protocol SwiftPopMenuDelegate :NSObjectProtocol{
     func swiftPopMenuDidSelectIndex(index:Int)
 }
 
@@ -28,7 +28,7 @@ public enum SwiftPopMenuConfigure {
     case PopMenuTextColor(UIColor)          //菜单文字颜色
     case PopMenuBackgroudColor(UIColor)     //菜单背景色
     case popMenuCornorRadius(CGFloat)            //菜单圆角
-    case popMenuItemHeight(CGFloat)          //菜单高度
+    case popMenuItemHeight(CGFloat)          //菜单行高度
     case popMenuSplitLineColor(UIColor)     //菜单分割线颜色
     case popMenuIconLeftMargin(CGFloat)          //icon左间距
     case popMenuMargin(CGFloat)              //菜单与屏幕边距
@@ -38,7 +38,7 @@ public enum SwiftPopMenuConfigure {
 public class SwiftPopMenu: UIView {
     
     //delegate
-    public var delegate : SwiftPopMenuDelegate?
+    weak var delegate : SwiftPopMenuDelegate?
     //block
     public var didSelectMenuBlock:((_ index:Int)->Void)?
     

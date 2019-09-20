@@ -18,7 +18,7 @@
 
 import UIKit
 
-public protocol SwiftPopMenuDelegate {
+protocol SwiftPopMenuDelegate :NSObjectProtocol{
     func swiftPopMenuDidSelectIndex(index:Int)
 }
 
@@ -38,7 +38,7 @@ public enum SwiftPopMenuConfigure {
 public class SwiftPopMenu: UIView {
     
     //delegate
-    public var delegate : SwiftPopMenuDelegate?
+    weak var delegate : SwiftPopMenuDelegate?
     //block
     public var didSelectMenuBlock:((_ index:Int)->Void)?
     
