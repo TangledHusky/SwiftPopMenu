@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         ]
         
         //init  (test随机生成点位置，注意：arrow点是基于屏幕的位置)
-        popMenu = SwiftPopMenu(menuWidth: 150, arrow: CGPoint(x: CGFloat(arc4random_uniform(UInt32(KSCREEN_WIDTH-100)) + 80), y: CGFloat(arc4random_uniform(UInt32(KSCREEN_HEIGHT-100)) + 80)), datas: popData,configures: parameters)
+        popMenu = SwiftPopMenu(menuWidth: 150, arrow: CGPoint(x: KSCREEN_WIDTH-17, y: 75), datas: popData,configures: parameters)
 
         //click
         popMenu.didSelectMenuBlock = { [weak self](index:Int)->Void in            
