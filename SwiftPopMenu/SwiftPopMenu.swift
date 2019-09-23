@@ -18,7 +18,7 @@
 
 import UIKit
 
-protocol SwiftPopMenuDelegate :NSObjectProtocol{
+public protocol SwiftPopMenuDelegate :NSObjectProtocol{
     func swiftPopMenuDidSelectIndex(index:Int)
 }
 
@@ -89,7 +89,7 @@ public class SwiftPopMenu: UIView {
  ///   - arrow: 箭头位置是popmenu相对整个屏幕的位置
  ///   - datas: 数据源，icon允许传空，数据源没数据，不会显示菜单
  ///   - configure: 配置信息，可不传
-    init(menuWidth:CGFloat,arrow:CGPoint,datas:[(icon:String,title:String)],configures:[SwiftPopMenuConfigure] = []) {
+    public  init(menuWidth:CGFloat,arrow:CGPoint,datas:[(icon:String,title:String)],configures:[SwiftPopMenuConfigure] = []) {
         super.init(frame: UIScreen.main.bounds)
         self.frame = UIScreen.main.bounds
         //读取配置
