@@ -44,8 +44,9 @@ class ViewController: UIViewController {
             .PopMenuTextFont(UIFont.systemFont(ofSize: 18))
         ]
         
+        
         //init  (test随机生成点位置，注意：arrow点是基于屏幕的位置)
-        popMenu = SwiftPopMenu(menuWidth: 150, arrow: CGPoint(x: KSCREEN_WIDTH-17, y: 75), datas: popData,configures: parameters)
+        popMenu = SwiftPopMenu(menuWidth: 150, arrow: CGPoint(x: btn.center.x, y: btn.center.y+30), datas: popData,configures: parameters)
 
         //click
         popMenu.didSelectMenuBlock = { [weak self](index:Int)->Void in            

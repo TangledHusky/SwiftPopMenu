@@ -344,7 +344,6 @@ class SwiftPopMenuCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        print(self.bounds)
         self.iconImage.frame = CGRect(x: iconLeft, y: (self.bounds.size.height - 20)/2, width: 20, height: 20)
         self.lblTitle.frame = CGRect(x: 20+iconLeft*2, y: 0, width: self.bounds.size.width - 40, height: self.bounds.size.height)
         self.line.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1)
